@@ -72,48 +72,56 @@ CREATE TABLE creates a new table in the database. It allows you to specify the n
 	  column_3 datatype
 	);
 
-DELETE
-
-DELETE FROM table_name
-WHERE some_column = some_value;
+## DELETE
 
 DELETE statements are used to remove rows from a table.
-GROUP BY
 
-SELECT column_name, COUNT(*)
-FROM table_name
-GROUP BY column_name;
+	DELETE FROM table_name
+	WHERE some_column = some_value;
+
+## GROUP BY
 
 GROUP BY is a clause in SQL that is only used with aggregate functions. It is used in collaboration with the SELECT statement to arrange identical data into groups.
-HAVING
+	SELECT column_name, COUNT(*)
+	FROM table_name
+	GROUP BY column_name;
 
-SELECT column_name, COUNT(*)
-FROM table_name
-GROUP BY column_name
-HAVING COUNT(*) > value;
+
+## HAVING
 
 HAVING was added to SQL because the WHERE keyword could not be used with aggregate functions.
-INNER JOIN
 
-SELECT column_name(s)
-FROM table_1
-JOIN table_2
-  ON table_1.column_name = table_2.column_name;
+
+	SELECT column_name, COUNT(*)
+	FROM table_name
+	GROUP BY column_name
+	HAVING COUNT(*) > value;
+
+## INNER JOIN
 
 An inner join will combine rows from different tables if the join condition is true.
-INSERT
 
-INSERT INTO table_name (column_1, column_2, column_3) 
-VALUES (value_1, 'value_2', value_3);
+
+	SELECT column_name(s)
+	FROM table_1
+	JOIN table_2
+	  ON table_1.column_name = table_2.column_name;
+
+## INSERT
 
 INSERT statements are used to add a new row to a table.
-IS NULL / IS NOT NULL
 
-SELECT column_name(s)
-FROM table_name
-WHERE column_name IS NULL;
+	INSERT INTO table_name (column_1, column_2, column_3) 
+	VALUES (value_1, 'value_2', value_3);
+
+## IS NULL / IS NOT NULL
 
 IS NULL and IS NOT NULL are operators used with the WHERE clause to test for empty values.
+
+	SELECT column_name(s)
+	FROM table_name
+	WHERE column_name IS NULL;
+
 LIKE
 
 SELECT column_name(s)
