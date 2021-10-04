@@ -122,73 +122,85 @@ IS NULL and IS NOT NULL are operators used with the WHERE clause to test for emp
 	FROM table_name
 	WHERE column_name IS NULL;
 
-LIKE
-
-SELECT column_name(s)
-FROM table_name
-WHERE column_name LIKE pattern;
+## LIKE
 
 LIKE is a special operator used with the WHERE clause to search for a specific pattern in a column.
-LIMIT
 
-SELECT column_name(s)
-FROM table_name
-LIMIT number;
+	SELECT column_name(s)
+	FROM table_name
+	WHERE column_name LIKE pattern;
+
+## LIMIT
 
 LIMIT is a clause that lets you specify the maximum number of rows the result set will have.
-MAX()
 
-SELECT MAX(column_name)
-FROM table_name;
+	SELECT column_name(s)
+	FROM table_name
+	LIMIT number;
+
+## MAX()
 
 MAX() is a function that takes the name of a column as an argument and returns the largest value in that column.
-MIN()
 
-SELECT MIN(column_name)
-FROM table_name;
+	SELECT MAX(column_name)
+	FROM table_name;
+
+## MIN()
 
 MIN() is a function that takes the name of a column as an argument and returns the smallest value in that column.
-OR
 
-SELECT column_name
-FROM table_name
-WHERE column_name = value_1
-   OR column_name = value_2;
+	SELECT MIN(column_name)
+	FROM table_name;
+
+33 OR
 
 OR is an operator that filters the result set to only include rows where either condition is true.
-ORDER BY
 
-SELECT column_name
-FROM table_name
-ORDER BY column_name ASC | DESC;
+	SELECT column_name
+	FROM table_name
+	WHERE column_name = value_1
+	   OR column_name = value_2;
+
+## ORDER BY
 
 ORDER BY is a clause that indicates you want to sort the result set by a particular column either alphabetically or numerically.
-OUTER JOIN
 
-SELECT column_name(s)
-FROM table_1
-LEFT JOIN table_2
-  ON table_1.column_name = table_2.column_name;
+	SELECT column_name
+	FROM table_name
+	ORDER BY column_name ASC | DESC;
+
+## OUTER JOIN
 
 An outer join will combine rows from different tables even if the join condition is not met. Every row in the left table is returned in the result set, and if the join condition is not met, then NULL values are used to fill in the columns from the right table.
-ROUND()
 
-SELECT ROUND(column_name, integer)
-FROM table_name;
+	SELECT column_name(s)
+	FROM table_1
+	LEFT JOIN table_2
+	  ON table_1.column_name = table_2.column_name;
+
+## ROUND()
 
 ROUND() is a function that takes a column name and an integer as arguments. It rounds the values in the column to the number of decimal places specified by the integer.
-SELECT
 
-SELECT column_name 
-FROM table_name;
+	SELECT ROUND(column_name, integer)
+	FROM table_name;
+
+
+## SELECT
 
 SELECT statements are used to fetch data from a database. Every query will begin with SELECT.
-SELECT DISTINCT
 
-SELECT DISTINCT column_name
-FROM table_name;
+	SELECT column_name 
+	FROM table_name;
+
+## SELECT DISTINCT
 
 SELECT DISTINCT specifies that the statement is going to be a query that returns unique values in the specified column(s).
+
+	SELECT DISTINCT column_name
+	FROM table_name;
+
+
 SUM
 
 SELECT SUM(column_name)
