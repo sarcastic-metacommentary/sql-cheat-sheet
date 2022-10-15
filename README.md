@@ -201,34 +201,37 @@ SELECT DISTINCT specifies that the statement is going to be a query that returns
 	FROM table_name;
 
 
-SUM
+## SUM
 
-SELECT SUM(column_name)
-FROM table_name;
+		SELECT SUM(column_name)
+	FROM table_name;
 
 SUM() is a function that takes the name of a column as an argument and returns the sum of all the values in that column.
-UPDATE
 
-UPDATE table_name
-SET some_column = some_value
-WHERE some_column = some_value;
+## UPDATE
+
+			UPDATE table_name
+		SET some_column = some_value
+	WHERE some_column = some_value;
 
 UPDATE statements allow you to edit rows in a table.
-WHERE
 
-SELECT column_name(s)
-FROM table_name
-WHERE column_name operator value;
+##WHERE
+
+			SELECT column_name(s)
+		FROM table_name
+	WHERE column_name operator value;
 
 WHERE is a clause that indicates you want to filter the result set to include only rows where the following condition is true.
-WITH
 
-WITH temporary_name AS (
-   SELECT *
-   FROM table_name)
-SELECT *
-FROM temporary_name
-WHERE column_name operator value;
+##WITH
+
+						WITH temporary_name AS (
+					   SELECT *
+				   FROM table_name)
+			SELECT *
+		FROM temporary_name
+	WHERE column_name operator value;
 
 WITH clause lets you store the result of a query in a temporary table using an alias. You can also define multiple temporary tables using a comma and with one instance of the WITH keyword.
 
